@@ -26,9 +26,12 @@ permalink: pretty
 # ----------------------- #
 
 social:
-  - title: twitter
-    url: https://twitter.com/SBootstrap
-  - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
-  - title: linkedin
+  - title: Skq_Ultra
+    icon: wechat
     url: 
+  - title: GITHUB
+    icon: github
+    url: https://github.com/SkqUltra/SkqUltra.github.io
+  - title: WEIBO
+    icon: weibo
+    url: http://weibo.com/2685469157
