@@ -5,8 +5,8 @@
     <description></description>
     <link>http://skqultra.github.io/</link>
     <atom:link href="http://skqultra.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 26 Aug 2016 14:38:07 +0800</pubDate>
-    <lastBuildDate>Fri, 26 Aug 2016 14:38:07 +0800</lastBuildDate>
+    <pubDate>Fri, 26 Aug 2016 20:26:56 +0800</pubDate>
+    <lastBuildDate>Fri, 26 Aug 2016 20:26:56 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -76,7 +76,7 @@
         <link>http://skqultra.github.io/2015/09/22/js-version/</link>
         <guid isPermaLink="true">http://skqultra.github.io/2015/09/22/js-version/</guid>
         
-        <category>前端开发</category>
+        <category>开发</category>
         
         <category>JavaScript</category>
         
@@ -123,7 +123,7 @@
         <link>http://skqultra.github.io/2015/07/09/js-module-7day/</link>
         <guid isPermaLink="true">http://skqultra.github.io/2015/07/09/js-module-7day/</guid>
         
-        <category>前端开发</category>
+        <category>开发1</category>
         
         <category>JavaScript</category>
         
@@ -450,7 +450,7 @@
         <link>http://skqultra.github.io/2015/05/25/js-module-loader/</link>
         <guid isPermaLink="true">http://skqultra.github.io/2015/05/25/js-module-loader/</guid>
         
-        <category>前端开发</category>
+        <category>开发</category>
         
         <category>JavaScript</category>
         

@@ -85,19 +85,16 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
+        title: "matrix67",
+        href: "http://www.matrix67.com/blog/"
     },{
-        title: "Foo",
-        href: "#"
+        title: "Erlang",
+        href: "http://erlang.org/doc/man/gen_server.html"
     },{
-        title: "Bar",
-        href: "#"
+        title: "Cocos",
+        href: "http://www.cocos.com/"
     },{
-        title: "Example Friends",
-        href: "#"
-    },{
-        title: "It helps SEO",
-        href: "#"
+        title: "yufeng",
+        href: "http://blog.yufeng.info/"
     }
 ]
