@@ -1,3 +1,8 @@
+/*!
+ * Hux Blog v1.0.0 (http://huxpro.github.io)
+ * Copyright 2016 Hux
+ */
+
 @media (min-width: 1200px) {
   .post-container,
   .sidebar-container {
@@ -43,7 +48,7 @@
 }
 .sidebar-container .short-about p {
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .sidebar-container .short-about .list-inline > li {
   padding-left: 0px;
@@ -426,7 +431,7 @@ pre code {
      */
   font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
-  font-size: 18px;
+  font-size: 30px;
   line-height: 1.1;
   display: block;
   font-weight: 300;
