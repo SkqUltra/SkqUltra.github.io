@@ -1,6 +1,6 @@
 # Site settings
-title: 半桶水的博客
-SEOTitle: 半桶水的博客
+title: 半桶水的陋室
+SEOTitle: 半桶水的陋室
 header-img: img/home-bg.jpg
 email: 531671505@qq.com
 description: ""
@@ -25,7 +25,7 @@ github_username:    skqultra
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","ignore"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 

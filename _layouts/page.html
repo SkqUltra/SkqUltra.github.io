@@ -10,12 +10,13 @@ layout: default
                 <div class="site-heading">
                     <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
                     <!--<hr class="small">-->
-                    {% if page.description %}
-                    <span class="subheading">{{ page.description }}</span>
-                    {% else %}
+                    {% if page.description3 %}
                     <span class="subheading">{{ page.description1 }}</span>
                     <span class="subheading">{{ page.description2 }}</span>
                     <span class="subheading">{{ page.description3 }}</span>
+                    {% else %}
+                    <span class="subheading">{{ page.description1 }}</span>
+                    <span class="subheading">{{ page.description2 }}</span>
                     {% endif %}
                 </div>
             </div>
@@ -42,7 +43,7 @@ layout: default
                 {% if site.featured-tags %}
                 <section>
                     <!-- no hr -->
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">天赋展示</a></h5>
                     <div class="tags">
         				{% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
@@ -58,7 +59,7 @@ layout: default
                 <!-- Friends Blog -->
                 {% if site.friends %}
                 <hr>
-                <h5>FRIENDS</h5>
+                <h5>英雄帖</h5>
                 <ul class="list-inline">
                     {% for friend in site.friends %}
                         <li><a href="{{friend.href}}">{{friend.title}}</a></li>
@@ -91,7 +92,7 @@ layout: default
                 {% if site.featured-tags %}
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">天赋展示</a></h5>
                     <div class="tags">
                         {% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
@@ -106,7 +107,7 @@ layout: default
 
                 <!-- Short About -->
                 <section class="visible-md visible-lg">
-                    <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
+                    <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">角色简介</a></h5>
                     <div class="short-about" style="color:#525252;">
                         {% if site.sidebar-avatar %}
                             <img src="{{site.sidebar-avatar}}" />
@@ -188,7 +189,7 @@ layout: default
                 <!-- Friends Blog -->
                 {% if site.friends %}
                 <hr>
-                <h5>友情链接</h5>
+                <h5>英雄帖</h5>
                 <ul class="list-inline">
                     {% for friend in site.friends %}
                         <li><a href="{{friend.href}}">{{friend.title}}</a></li>

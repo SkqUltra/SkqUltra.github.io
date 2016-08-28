@@ -267,7 +267,7 @@ pre code {
   }
 }
 .navbar-custom {
-  background: none;
+  background: rgba(0, 0, 0, 0.3);
   border: none;
   position: absolute;
   top: 0;
@@ -302,7 +302,7 @@ pre code {
 }
 @media only screen and (min-width: 768px) {
   .navbar-custom {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid transparent;
   }
   .navbar-custom body {
@@ -319,6 +319,7 @@ pre code {
   }
   .navbar-custom .nav li a {
     color: white;
+    font-size: 18px;
     padding: 20px;
   }
   .navbar-custom .nav li a:hover,

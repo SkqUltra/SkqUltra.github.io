@@ -12,6 +12,7 @@ layout: default
         background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
     }
 </style>
+<!-- <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span> -->
 <header class="intro-header" >
     <div class="container">
         <div class="row">
@@ -29,7 +30,7 @@ layout: default
                     {% comment %} if page.subtitle {% endcomment %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% comment %} endif {% endcomment %}
-                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <span class="meta">{{ page.author }}于{{ page.date | date: "%x" }}书</span>
                 </div>
             </div>
         </div>
@@ -59,9 +60,10 @@ layout: default
                     style="text-align: right"
                     data-thread-key="{{page.id}}"
                     data-title="{{page.title}}"
+                    data-content="{{ content | strip_html | truncate:80 }} | {{ site.SEOTitle }} "
                     data-url="{{site.url}}{{site.baseurl}}{{page.url}}"
                     data-images="{{site.sidebar-avatar}}"
-                    data-content="{{ content | strip_html | truncate:80 }} | {{ site.SEOTitle }} " >
+                    >
                     <div class="ds-share-inline">
                       <ul  class="ds-share-icons-16">
 <!--                    <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li> -->
@@ -134,7 +136,7 @@ layout: default
                 {% if site.featured-tags %}
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <h5><a href="/tags/">天赋展示</a></h5>
                     <div class="tags">
         				{% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
@@ -150,7 +152,7 @@ layout: default
                 <!-- Friends Blog -->
                 {% if site.friends %}
                 <hr>
-                <h5>友情链接</h5>
+                <h5>英雄帖</h5>
                 <ul class="list-inline">
                     {% for friend in site.friends %}
                         <li><a href="{{friend.href}}">{{friend.title}}</a></li>
