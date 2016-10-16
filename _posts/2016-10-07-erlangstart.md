@@ -50,4 +50,61 @@ tags:
 ]}].   
 </pre>
 
-　未完待续......
+　以下10月16记
+
+　使用上述blog配置进行测试，输入
+
+	error_logger:error_msg("123").  
+
+　产生一条错误信息，之后进入logs目录下会发现多了两个文件，一个名为index，一个名为1。当你想打开文件1看看报错信息时，便瞬间傻眼了，这尼玛都是什么东西，文件内容节选如下：
+
+	0155 8368 0268 0268 0362 0000 07e0 610a
+	6110 6803 610f 611f 610b 6803 6400 0b69
+	6e66 6f5f 7265 706f 7274 6764 000d 6e6f
+	6e6f 6465 406e 6f68 6f73 7400 0000 2000
+	0000 0000 6803 6764 000d 6e6f 6e6f 6465
+	406e 6f68 6f73 7400 0000 2300 0000 0000
+	6400 0870 726f 6772 6573 736c 0000 0002
+
+　原来erlang还提供了一套rb模块来提取错误信息，简单来说就是可以用rb模块中提供的一些函数，来将上面那段天书提取成我们需要的信息，具体函数这里就不一一介绍，因为并不打算使用 囧rz..
+
+　但是我还是对rb模块将上述天书转变成普通字符的过程感兴趣，查阅相关源码后，可以提取出主要算法：
+
+<pre>
+1. {ok, Pid} = file:open("1",  [read]).
+2. [Hi, Lo] = io:get_chars(Pid,'',2).
+3. Len = ((Hi bsl 8) band 16#ff00) bor (Lo band 16#ff).
+4. String = binary_to_term(list_to_binary(io:get_chars(Pid,'',Len))).
+</pre>
+
+　在第一步获取到Pid后，循环2至4步骤至文件结束，每一次循环生成的String就是给人类阅读的数据了。
+　
+
+　用这套流程来还原下上述十六进制的数据，(节选)结果为：
+
+<pre>
+{{'{{{'}}2016,10,16},{15,31,11}},
+ {info_report,<0.32.0>,
+     {<0.35.0>,progress,
+      [{supervisor,{local,sasl_safe_sup}},
+       {started,
+           [{pid,<0.36.0>},
+            {id,alarm_handler},
+            {mfargs,{alarm_handler,start_link,[]}},
+            {restart_type,permanent},
+            {shutdown,2000},
+            {child_type,worker}]}]}}}
+{{'{{{'}}2016,10,16},{15,31,11}},
+ {info_report,<0.32.0>,
+     {<0.35.0>,progress,
+      [{supervisor,{local,sasl_safe_sup}},
+       {started,
+           [{pid,<0.37.0>},
+            {id,overload},
+            {mfargs,{overload,start_link,[]}},
+            {restart_type,permanent},
+            {shutdown,2000},
+            {child_type,worker}]}]}}}
+</pre>
+
+　感觉怎样操作十分之繁琐，如何才能自定义输出的错误日志呢？摸索ing...
