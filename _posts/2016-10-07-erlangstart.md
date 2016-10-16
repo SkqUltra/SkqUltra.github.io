@@ -12,7 +12,7 @@ tags:
 
 　在介绍错误日志配置前，先简单介绍下“错误”，根据产生来源可分为两种：
 
-- __人为产生__  
+- __人为产生__
 - __自动产生__
 
 　何为人为产生呢，就是码农在写代码时灵光一闪，“诶，这里我想让代码报一条hello girlfriend 的错误”，于是便可以调用Erlang错误日志的相关api主动让代码写入一条错误信息。
@@ -27,7 +27,7 @@ tags:
 　除人为调用api产生的错误信息外，Erlang内置的错误处理模块会记录以下三种类型的信息：
 
 -  __监管报告__  　　　监管进程启动，停止被监管的进程时，产生报告
--  __进程报告__　　　  OTP监管进程启动或停止时，产生的报告
+-  \_\_进程报告\_\_　　　  OTP监管进程启动或停止时，产生的报告
 -  __崩溃报告__ 　　　 被监管进程退出，且退出原因不是normal或shutdown时
 
 　一般情况下，我们只关注错误信息，而忽视掉进程信息，不然错误日志可能就会boomboom。
@@ -42,12 +42,12 @@ tags:
 
 <pre>
 [{sasl, [   
-		{sasl_error_logger, false},    %%错误信息显示点
-		{errlog_type, error},   %%日志错误类型
-		{error_logger_mf_dir, "./logs"},     %% 文件目录
-		{error_logger_mf_maxbytes, 1048760}, %% 文件大小   
-		{error_logger_mf_maxfiles, 10}       %% 最大可用文件个数
+        {sasl_error_logger, false},    %%错误信息显示点
+        {errlog_type, error},   %%日志错误类型
+        {error_logger_mf_dir, "./logs"},     %% 文件目录
+        {error_logger_mf_maxbytes, 1048760}, %% 文件大小   
+        {error_logger_mf_maxfiles, 10}       %% 最大可用文件个数
 ]}].   
 </pre>
 
-　未完待续，接下来计划贴上源码对于这块内容的相关处理。
+　未完待续......
